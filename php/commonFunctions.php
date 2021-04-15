@@ -4,7 +4,7 @@ if(!function_exists('getConnection')){
     // create connection funcion
     function createConnection(){
         // credentials
-        $url = parse_url(getenv("mysql://b778a423118452:22b192a7@us-cdbr-east-03.cleardb.com/heroku_963111a3fb10ae1?reconnect=true"));
+      $url = parse_url(getenv("mysql://bc005626eca4de:f24623a1@us-cdbr-east-03.cleardb.com/heroku_d75ec31c7fdaee9?reconnect=true"));
       $server = $url["host"];
       $username = $url["user"];
       $password = $url["pass"];
