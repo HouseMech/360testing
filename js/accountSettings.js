@@ -12,7 +12,7 @@ $(document).ready(function(){
         $.ajax({
             async: true,
             type:"post",
-            url:"../php/getUsersCredentials.php"
+            url:"/php/getUsersCredentials.php"
         })
         .done(function(data){
             var jsonObj =JSON.parse(data)
@@ -34,7 +34,7 @@ $(document).ready(function(){
             $.ajax({
                 async: true,
                 type:"post",
-                url: "../php/updateCredentials.php",
+                url: "/php/updateCredentials.php",
                 data:inputData
             }).done(function(data){
                 $("#message").html(data);
