@@ -68,7 +68,7 @@
         if (empty($topic)){ echo "<h3 id='post-item'>" . 'None' . "</u></h3>"; }
         else {
           // Search for post with similar topics.
-          echo "<form method='GET' action='php/search.php'>";
+          echo "<form method='GET' action='/php/search.php'>";
           echo "<input id='post-item' name='search' type='submit' value=" . $topic . "></input>";
           echo "</form>";
         }
@@ -76,14 +76,14 @@
         // View user profile.
         echo "</td>";
         echo "<td>";
-        echo "<form method='GET' action='php/viewProfile.php'>";
+        echo "<form method='GET' action='/php/viewProfile.php'>";
         echo "<input id='post-item' name='user' type='submit' value=" . $user . "></input>";
         echo "</form>";
         echo "</td>";
 
         // Like button.
         echo "<td>";
-        echo "<form id='btn-item' action='php/like.php?pid=" . $pid . "&user=" . $username .  "' method='get'>";
+        echo "<form id='btn-item' action='/php/like.php?pid=" . $pid . "&user=" . $username .  "' method='get'>";
         echo "<button id='post-item' type='submit' formmethod='post'>" . '(' . $likes . ') 👍' . "</button>";
         echo "</form>";
         echo "</td>";
@@ -130,7 +130,7 @@
               if ($cUserName == $username){
                 echo "<tr>";
                 echo "<td>";
-                echo "<form action='php/deleteComment.php?pid=" . $pid . "&cid=" . $cid . "' method='get'>";
+                echo "<form action='/php/deleteComment.php?pid=" . $pid . "&cid=" . $cid . "' method='get'>";
                 echo "<button id='comment-del-btn' type='submit' formmethod='post'>❌ comment</button>";
                 echo "</form>";
                 echo "</td>";
