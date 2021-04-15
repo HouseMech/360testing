@@ -28,10 +28,10 @@
         <p>
           You can view other posts and comments made by others by using the search bar above.<br>
           (<i>You are not required to be signed-in to access this feature.</i>) <br>
-          If you wish to post or comment, than you must <a href='pages/signIn.php'>Sign-In</a>.
+          If you wish to post or comment, than you must <a href='signIn.php'>Sign-In</a>.
         </p>
         <p>
-          If you do not have an account already, please visit the <a href='pages/signUp.php'>Sign-Up</a> link.
+          If you do not have an account already, please visit the <a href='signUp.php'>Sign-Up</a> link.
         </p>
         <p>
           Thank you for visiting BlogPost!<br> Please see the
@@ -40,7 +40,7 @@
         </p>
       </div>
     </div>
-    
+
   </div>
 
   <?php include '../layouts/footer.php';?>

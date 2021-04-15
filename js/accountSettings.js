@@ -9,10 +9,10 @@ $(document).ready(function(){
     var elements = [userName, fName, lName, email];
     // get users credentals and diplays them in input boxes
     function updateScreen(){
-        $.ajax({ 
+        $.ajax({
             async: true,
             type:"post",
-            url:"./php/getUsersCredentials.php"
+            url:"../php/getUsersCredentials.php"
         })
         .done(function(data){
             var jsonObj =JSON.parse(data)
@@ -20,12 +20,12 @@ $(document).ready(function(){
             fName.val(jsonObj.firstName);
             lName.val(jsonObj.lastName);
             email.val(jsonObj.email);
-            
+
         });
     }
     // initially get all user credantials and place them in input boxes
     updateScreen();
-   
+
 
     $("#saveBtn").on('click', function(e){
         e.preventDefault();
@@ -35,7 +35,7 @@ $(document).ready(function(){
                 async: true,
                 type:"post",
                 url: "./php/updateCredentials.php",
-                data:inputData 
+                data:inputData
             }).done(function(data){
                 $("#message").html(data);
                 updateScreen();
@@ -43,7 +43,7 @@ $(document).ready(function(){
                 setTimeout(function(){$("#message").html("");}, 3000);
             });
         }
-    });       
+    });
     // makes sure all fields are filled
     function valid(){
     var valid = true;
@@ -58,4 +58,3 @@ $(document).ready(function(){
     return valid;
   }
 });
-
