@@ -12,6 +12,14 @@
 
       <div id="center">
         <h2 id='subHead'>Home Feed:</h2>
+        <?php
+          // Insert this bottom line into any page that can be viewed as both logged in/logged out state.
+          if (empty($_SESSION["username"])){$username = 'NULL';} else {$username = $_SESSION['username'];}
+          // HOT POSTS.
+          // Create connection and fetch the top 5 most liked posts.
+          $conn = createConnection();
+          
+        ?>
       </div>
   </div>
   <?php include 'layouts/footer.php';?>
