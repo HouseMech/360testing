@@ -18,14 +18,14 @@ $(document).ready(function(){
       if(valid()){
           $.ajax({
               type: "post",
-              url:  "../php/signIn.php",
+              url:  "/php/signIn.php",
               data: {email: email.val(), password: password.val()}
           }).done(function(data){
               if(data == "success"){
                 // submit form which will redirect to index.phps
                 // will only work on local machine
                 window.location.replace("http://localhost/Group32ProjectCosc360/index.php");
-                
+
               }
               $("#message").html(data);
           }).fail(function(jqXHR) {console.log("Error: " + jqXHR.status);});
