@@ -19,8 +19,8 @@
           // Create connection and fetch the top 5 most liked posts.
           $conn = createConnection();
           $stmt = $conn->prepare("SELECT * FROM post ORDER BY likes DESC LIMIT 5");
-          $stmt->execute();
-          $result = $stmt->get_result();
+          // $stmt->execute();
+          // $result = $stmt->get_result();
           //$num_posts = $result -> num_rows;
 
 
