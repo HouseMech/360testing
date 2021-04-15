@@ -40,7 +40,7 @@
       echo '<p id="sidebar-username" style="color:black;">';
       echo $row['userName'];
       echo '</p>';
-      
+
       echo "<div id='flName'>";
       echo "<h2>" . $fName . " " . $lName . "</h2>";
       echo "</div>";
@@ -75,7 +75,7 @@
         $postTopic = $row['topic'];
         $allowComments = $row['allowComment'];
         $stmt->close();
-        
+
         echo "<div id='blogPost'>";
         echo "<h2>" . $postTitle . "</h2>";
         echo "<p id='time-log'>" . $time . "</p>";
@@ -96,13 +96,13 @@
         echo "<th id='post-header'>Author:</th>";
         echo "<th id='post-header'># Likes:</th>";
         echo "</tr>";
-        
+
         echo "<tr>";
         echo "<td>";
         if (empty($postTopic)){
           echo "<h3 id='post-item'>" . 'None' . "</u></h3>";
         } else {
-          echo "<form method='GET' action='php/search.php'>";
+          echo "<form method='GET' action='/php/search.php'>";
           echo "<input id='post-item' name='search' type='submit' value=" . $postTopic . "></input>";
           echo "</form>";
         }
@@ -110,14 +110,14 @@
         // View user profile.
         echo "</td>";
         echo "<td>";
-        echo "<form method='GET' action='php/viewProfile.php'>";
+        echo "<form method='GET' action='/php/viewProfile.php'>";
         echo "<input id='post-item' name='user' type='submit' value=" . $pUserName . "></input>";
         echo "</form>";
         echo "</td>";
-        
+
         // Like button. (Liking the post will direct the user to the post page automatically).
         echo "<td>";
-        echo "<form id='btn-item' action='php/like.php?pid=" . $pid . "&user=" . $username .  "' method='get'>";
+        echo "<form id='btn-item' action='/php/like.php?pid=" . $pid . "&user=" . $username .  "' method='get'>";
         echo "<button id='post-item' type='submit' formmethod='post'>" . '(' . $likes . ') 👍' . "</button>";
         echo "</form>";
         echo "</td>";
@@ -128,7 +128,7 @@
 
         // View post button.
         echo "<div id='btn-holder'>";
-        echo "<form id='btn-item' action='php/post.php?pid=" . $pid . "' method='get'>";
+        echo "<form id='btn-item' action='/php/post.php?pid=" . $pid . "' method='get'>";
         echo "<button id='btn-view' type='submit' formmethod='post'>View Post</button>";
         echo "</form>";
         echo "</div>";
@@ -174,7 +174,7 @@
 
         // View post button.
         echo "<div id='btn-holder'>";
-        echo "<form id='btn-item' action='php/post.php?pid=" . $pid . "' method='get'>";
+        echo "<form id='btn-item' action='/php/post.php?pid=" . $pid . "' method='get'>";
         echo "<button id='btn-view' type='submit' formmethod='post'>View Comment</button>";
         echo "</form>";
         echo "</div>";
