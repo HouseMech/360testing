@@ -2,7 +2,7 @@
 <html lang="en">
 
   <?php include 'layouts/global_head_include.php';?>
-  <script type = "text/javascript" src="./js/getPost.js"></script>
+  <script type = "text/javascript" src="/js/getPost.js"></script>
   <body>
     <?php include_once 'layouts/header.php';?>
     <?php include 'php/commonFunctions.php';?>
@@ -55,7 +55,7 @@
 
                 // If attached image.
                 if (!empty($imagePath)) {
-                  echo "<div id='img-link'><a href='./img/pimg/" . $imagePath . "' target='_blank'>View Attached Image</a></div>";
+                  echo "<div id='img-link'><a href='/img/pimg/" . $imagePath . "' target='_blank'>View Attached Image</a></div>";
                 }
 
                 echo "<div id='post-log'>";

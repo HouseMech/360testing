@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <?php include '../layouts/global_head_include.php';?>
-  <script type="text/javascript" src="./js/newPost.js"></script>
+  <?php include '/layouts/global_head_include.php';?>
+  <script type="text/javascript" src="/js/newPost.js"></script>
   <body>
   <?php include_once '../layouts/header.php';?>
 
