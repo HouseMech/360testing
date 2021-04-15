@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <?php include 'layouts/global_head_include.php';?>
-  <script type = "text/javascript" src="./js/getPost.js"></script>
+  <?php include $_SERVER['DOCUMENT_ROOT'] . '/layouts/global_head_include.php';?>
+  <script type = "text/javascript" src="<?php echo $path; ?>/js/getPost.js"></script>
   <body>
-    <?php include_once 'layouts/header.php';?>
-    <?php include 'php/commonFunctions.php';?>
+    <?php include_once $path . '/layouts/header.php';?>
+    <?php include $path . '/php/commonFunctions.php';?>
 
   <div class="main-content">
-      <?php include 'layouts/sidebar.php';?>
+      <?php include $path . '/layouts/sidebar.php';?>
 
       <div id="center">
         <h2 id='subHead'>Home Feed:</h2>
@@ -65,7 +65,7 @@
                 echo "<th id='post-header'>Author:</th>";
                 echo "<th id='post-header'># Likes:</th>";
                 echo "</tr>";
-                
+
                 echo "<tr>";
                 echo "<td>";
                 if (empty($postTopic)){
@@ -82,7 +82,7 @@
                 echo "<input id='post-item' name='user' type='submit' value=" . $pUserName . "></input>";
                 echo "</form>";
                 echo "</td>";
-                
+
                 echo "<td>";
                 echo "<form id='btn-item' action='php/like.php?pid=" . $pid . "&user=" . $username .  "' method='get'>";
                 echo "<button id='post-item' type='submit' formmethod='post'>" . '(' . $likes . ') 👍' . "</button>";
