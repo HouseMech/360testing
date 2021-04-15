@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>MyBlogPost</title>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script type = "text/javascript" src="../js/forgetPassword.js"></script>
+    <script type = "text/javascript" src="/js/forgetPassword.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/header.css">
   </head>

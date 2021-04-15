@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php include '../layouts/global_head_include.php';?>
-  <script type = "text/javascript" src="./js/getPost.js"></script>
+  <script type = "text/javascript" src="/js/getPost.js"></script>
 
   <body>
   <?php include_once '../layouts/header.php';?>
@@ -71,7 +71,7 @@
               echo "<th id='post-header'>Author:</th>";
               echo "<th id='post-header'># Likes:</th>";
               echo "</tr>";
-              
+
               echo "<tr>";
               echo "<td>";
               if (empty($postTopic)){
@@ -90,7 +90,7 @@
               echo "<input id='post-item' name='user' type='submit' value=" . $pUserName . "></input>";
               echo "</form>";
               echo "</td>";
-              
+
               // Like button.
               echo "<td>";
               echo "<form id='btn-item' action='php/like.php?pid=" . $pid . "&user=" . $username .  "' method='get'>";

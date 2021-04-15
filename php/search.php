@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php include '../layouts/global_head_include.php';?>
-  <script type = "text/javascript" src="./js/getPost.js"></script>
+  <script type = "text/javascript" src="/js/getPost.js"></script>
   <body>
   <?php include_once '../layouts/header.php';?>
   <?php include_once "commonFunctions.php"; ?>
@@ -10,7 +10,7 @@
     <div id="center">
       <?php
         global $search;
-        $search = $_GET["search"]; 
+        $search = $_GET["search"];
         echo "<h2 id='subHead'>Search Results for: <b>" . $search . "</b></h2>";
         $conn = createConnection();
 
@@ -66,7 +66,7 @@
             echo "<th id='post-header'>Author:</th>";
             echo "<th id='post-header'># Likes:</th>";
             echo "</tr>";
-            
+
             echo "<tr>";
             echo "<td>";
             if (empty($postTopic)){
@@ -80,7 +80,7 @@
             echo "</tr>";
             echo "</table>";
             echo "</div>";
-            
+
             // View post button.
             echo "<div id='btn-holder'>";
             echo "<form id='btn-item' action='php/post.php?pid=" . $pid . "' method='get'>";
@@ -121,7 +121,7 @@
             echo "<div id='blogPost'>";
             echo "<h2>" . $postTitle . "<img class='arrow' src='./img/pageImgs/up_arrow.png' height=25 width=25></h2>";
 
-    
+
             // div needed for collapsible post
             echo "<div class='slide'>";
 
@@ -146,7 +146,7 @@
             echo "<th id='post-header'>Author:</th>";
             echo "<th id='post-header'># Likes:</th>";
             echo "</tr>";
-            
+
             echo "<tr>";
             echo "<td>";
             if (empty($postTopic)){
@@ -160,7 +160,7 @@
             echo "</tr>";
             echo "</table>";
             echo "</div>";
-            
+
             // View post button.
             echo "<div id='btn-holder'>";
             echo "<form id='btn-item' action='php/post.php?pid=" . $pid . "' method='get'>";
@@ -194,14 +194,14 @@
             // Display post title.
             echo "<div id='blogPost'>";
             echo "<h2>" . $pUserName . "</h2>";
-            
+
             // View post button.
             echo "<div id='btn-holder'>";
             echo "<form id='btn-item' action='php/viewProfile.php?user=" . $pUserName . "' method='get'>";
             echo "<button id='btn-view' type='submit' formmethod='post'>View Profile</button>";
             echo "</form>";
             echo "</div>";
-            
+
             echo "</div>";
           }
         }

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>MyBlogPost</title>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script type = "text/javascript" src="../js/accountSettings.js"></script>
+    <script type = "text/javascript" src="/js/accountSettings.js"></script>
     <link rel="stylesheet" href="../css/style.css">
   </head>
   <?php include '../layouts/global_head_include.php';?>
@@ -53,7 +53,7 @@
           <p><input type='submit' value="DeleteAccount"id ='deleteBtn'/></p>
         </form>
         <?php endif; ?>
-    
+
   </div>
 
   <?php include '../layouts/footer.php';?>
