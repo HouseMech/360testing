@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php include '../layouts/global_head_include.php';?>
-  <script type = "text/javascript" src="./js/adminPanel.js"></script>
+  <script type = "text/javascript" src="/js/adminPanel.js"></script>
   <?php include_once "../php/commonFunctions.php"; ?>
 
   <body>
