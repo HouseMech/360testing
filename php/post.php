@@ -52,7 +52,7 @@
 
         // Link to open attached image in new tab.
         if (!empty($imagePath)) {
-          echo "<div id='img-link'><a href='./img/pimg/" . $imagePath . "' target='_blank'>View Attached Image</a></div>";
+          echo "<div id='img-link'><a href='/img/pimg/" . $imagePath . "' target='_blank'>View Attached Image</a></div>";
         }
 
         // Display post div.
@@ -144,8 +144,8 @@
           // If user is signed in, than display method buttons (comment, delete post, etc).
           if ($username != 'NULL'){
             echo "</div>";
-            echo "<form id='comment-form' action='php/addComment.php?pid=" . $pid . "&username=" . $username . "' method='get'>";
-            echo "<form id='comment-form' action='php/deletePost.php?pid=" . $pid . "' method='get'>";
+            echo "<form id='comment-form' action='/php/addComment.php?pid=" . $pid . "&username=" . $username . "' method='get'>";
+            echo "<form id='comment-form' action='/php/deletePost.php?pid=" . $pid . "' method='get'>";
             $comment = '';
             echo '<p><input type="text" name="comment" id="comment"  maxlength="60" value=' . $comment . '/></p>';
             echo "<button id='btn-view' type='submit' formmethod='post'>Add Comment</button>";
