@@ -1,0 +1,918 @@
+/* Home Page Styling */
+
+#masthead {
+  background-color: rgb(114, 70, 62);
+  color: rgb(255, 255, 255);
+  padding: 1em;
+  margin: 2em;
+  border: solid 3pt black;
+}
+
+body {
+  background-color: rgb(63, 62, 62);
+  margin: 0;
+  padding: 0;
+}
+
+#masthead h1 {
+  margin: auto;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#masthead table,
+td,
+tr {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2em;
+  border-spacing: 2em;
+}
+
+#masthead input:not(&.header-input) {
+  padding: 1em;
+  text-align: center;
+  margin: 1em auto auto auto;
+  cursor: text;
+  width: 60%;
+  opacity: 0.6;
+  border-radius: 1em;
+  font-weight: bold;
+}
+
+#menuItem:not(&.header-button) {
+  background-color: rgb(70, 70, 106);
+  border-radius: 10%;
+  margin: 0.5em;
+  border: solid 1pt black;
+  box-shadow: 4px 4px black;
+  font-size: 2em;
+  text-align: center;
+  padding: 0.5em;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+#active-item {
+  background-color: rgb(9, 9, 65);
+  border-radius: 10%;
+  margin: 0.5em;
+  border: solid 1pt black;
+  box-shadow: 4px 4px black;
+  font-size: 2em;
+  text-align: center;
+  padding: 0.5em;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+#menu {
+  margin: auto;
+}
+
+.inactive {
+  display: none;
+}
+
+#menuItem:hover {
+  background-color: rgb(208, 213, 216);
+  color: rgb(62, 68, 107);
+  transition-duration: 2s;
+}
+
+#menuTitle {
+  padding: 1em;
+  font-size: 3em;
+  color: white;
+}
+
+#masthead a,
+a:hover,
+a:active,
+a:visited {
+  color: white;
+}
+
+#mastfoot {
+  background-color: rgb(114, 70, 62);
+  color: rgb(255, 255, 255);
+  white-space: nowrap;
+  margin: 2em;
+  border: solid 3pt black;
+  text-align: center;
+  padding: 1em;
+  color: white;
+  transition-duration: 1s;
+}
+
+#mastfoot a {
+  margin: 1em;
+  transition-duration: 2s;
+}
+
+#mastfoot a,
+a:active,
+a:visited {
+  color: white;
+}
+
+a:hover {
+  background-color: rgb(170, 172, 174);
+}
+
+#main {
+  margin: 2em 5em 2em 5em;
+}
+
+.main-content {
+  padding-top: 100px;
+}
+
+#sidebar {
+  background-color: rgb(70, 70, 106);
+  padding: 1em;
+  height: 600px;
+  width: 15%;
+  float: left;
+  margin: auto 2em auto 2em;
+  border: solid 3pt black;
+}
+
+#center {
+  min-height: 600px;
+  border: solid 3pt black;
+  padding: 1em;
+  margin: auto 2em auto 2em;
+  background-color: rgb(206, 199, 199);
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  overflow: scroll;
+}
+
+#sidebar-topdiv {
+  margin: 1em;
+  margin-bottom: 1em;
+}
+
+#sidebar-bottomdiv {
+  display: flex;
+  flex-direction: column;
+}
+
+#userProfilePicture {
+  width: 85%;
+  height: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+#sidebar-username {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-family: Quicksand;
+  font-size: 1em;
+  transition-timing-function: ease-in;
+  transition-duration: 1s;
+}
+
+#sidebar-btn {
+  background-color: rgb(235, 235, 235);
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 10%;
+  color: black;
+  font-weight: bold;
+  padding: 1em;
+  border: solid 2pt black;
+  font-weight: bold;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  box-shadow: 2px 2px black;
+  text-decoration: none;
+}
+
+#sidebar-btn:hover {
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  background-color: #c2675f;
+  color: white;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+#active-btn {
+  background-color: #c2675f;
+  color: white;
+  text-align: center;
+  margin: 1em 1em 1em 1em;
+  font-size: 1em;
+  border-radius: 10%;
+  font-weight: bold;
+  padding: 1em;
+  border: solid 2pt black;
+  /* cursor: pointer; */
+  font-weight: bold;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+}
+
+#sidebar-btn:focus {
+  outline: none;
+  font-weight: bold;
+  font-family: Quicksand;
+}
+
+/* Sign In Page Styling */
+
+.signup-container {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 4em;
+  background-color: rosybrown;
+  border: solid 2pt black;
+}
+
+.signup-container input {
+  border-radius: 2em;
+  font-size: 1.5em;
+  text-align: center;
+  clear: both;
+  width: 80%;
+  margin: 1em;
+}
+
+.signup-container label {
+  font-size: 2em;
+}
+
+#signIn-btn {
+  width: 40%;
+  background-color: rgb(62, 107, 70);
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 0.25em;
+}
+
+#signUp-btn {
+  width: 40%;
+  background-color: rgb(46, 59, 150);
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 0.25em;
+}
+
+#forgetP:active,
+#forgetP:visited {
+  color: rgb(84, 26, 16);
+}
+
+.error {
+  background-color: red;
+}
+
+/* newPost.html styling */
+#newPost-form {
+  margin: auto;
+  display: block;
+  text-align: center;
+  background-color: rgb(219, 212, 212);
+  border: solid 3pt black;
+}
+
+#newPost-form label {
+  font-weight: bold;
+  font-size: 2em;
+  margin: 2em;
+}
+
+#pTitle {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+  border: solid 2pt black;
+  border-radius: 0.2em;
+  transition-timing-function: ease-out;
+  transition-duration: 2s;
+}
+
+#pTitle:hover {
+  background-color: rgb(250, 250, 212);
+  transition-timing-function: ease-in;
+  transition-duration: 1s;
+}
+
+#pDesc {
+  text-align: left;
+  margin-bottom: 1em;
+  font-size: 2em;
+  border: solid 2pt black;
+  border-radius: 0.2em;
+  transition-timing-function: ease-out;
+  transition-duration: 2s;
+}
+
+#pDesc:hover {
+  background-color: rgb(250, 250, 212);
+  transition-timing-function: ease-in;
+  transition-duration: 1s;
+}
+
+#pTags {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+  border: solid 2pt black;
+  border-radius: 0.2em;
+  transition-timing-function: ease-out;
+  transition-duration: 2s;
+}
+
+#pTags:hover {
+  background-color: rgb(250, 250, 212);
+  transition-timing-function: ease-in;
+  transition-duration: 1s;
+}
+
+#pImg {
+  text-align: center;
+  background-color: rgb(185, 185, 185);
+  display: inline;
+  margin-bottom: 1em;
+}
+
+#commentText {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#pSubmit {
+  text-align: center;
+  font-size: 2em;
+  background-color: rgb(192, 49, 49);
+  color: white;
+  border: solid 2pt black;
+  border-radius: 2em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  width: 60%;
+  box-shadow: 2px 2px black;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+#pSubmit:hover {
+  text-align: center;
+  font-size: 2em;
+  background-color: rgb(228, 76, 76);
+  color: white;
+  border: solid 2pt black;
+  border-radius: 2em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  width: 70%;
+  transition-duration: 2s;
+  font-weight: bold;
+  transition-timing-function: ease;
+}
+
+/* viewPosts.php styling */
+#numPosts h2 {
+  text-align: center;
+}
+
+#subHead {
+  text-align: center;
+  background-color: rgb(41, 41, 39);
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em;
+  padding: 0.5em;
+  color: white;
+}
+
+/* Each post is contained within it's own div named blogPost */
+#blogPost {
+  background-color: rgb(80, 79, 79);
+  border-radius: 1em;
+  padding: 1em;
+  margin: 2em;
+}
+
+/* Post Title */
+#blogPost h2 {
+  background-color: rgb(255, 255, 255);
+  font-size: 2em;
+  font-weight: bold;
+  border-radius: 1em;
+  color: rgb(10, 6, 6);
+  margin: auto;
+  text-align: center;
+  border: solid 2pt black;
+}
+
+/* Table containing the posts' title, author and # likes. */
+#post-log {
+  margin: auto;
+  text-align: center;
+  border-radius: 2em;
+  background-color: rgb(22, 21, 21);
+  margin: 1em auto;
+  width: 60%;
+  padding: 1em;
+}
+
+#post-table {
+  margin: 0 auto;
+}
+
+#post-log h4,
+h3,
+i {
+  display: inline-block;
+  margin: 0.25em;
+}
+
+/* Post Topic, Post Author, # Likes; <td> items */
+#post-item {
+  background-color: rgb(18, 29, 42);
+  color: white;
+  padding: 1em;
+  border-radius: 2em;
+  margin: 1em;
+  transition-timing-function: ease;
+  transition-duration: 2s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#post-item:hover {
+  background-color: rgb(36, 76, 126);
+  color: white;
+  padding: 1em;
+  border-radius: 2em;
+  margin: 1em;
+  transition-timing-function: ease;
+  transition-duration: 2s;
+  cursor: pointer;
+}
+
+/* Post Topic Headers, Post Author, # Likes; <th> items */
+#post-header {
+  background-color: rgb(25, 26, 27);
+  color: white;
+  padding: 1em;
+  border-radius: 2em;
+  margin: 1em;
+}
+
+/* Div containing time for the post. */
+#time-log {
+  background-color: rgb(54, 83, 144);
+  text-align: center;
+  margin: 1em;
+  border-radius: 2em;
+  width: 80%;
+}
+
+/* Post time */
+#blogPost p {
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+
+/* Spacer used between each post. */
+#spacer {
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Link to image opener button */
+#img-link {
+  text-align: center;
+  background-color: rgb(9, 9, 65);
+  width: 20%;
+  margin: 1em auto;
+  color: white;
+  border-radius: 1em;
+}
+
+/* Post description */
+#blogPost h5 {
+  text-align: center;
+  color: white;
+  font-size: 1em;
+  background-color: rgb(37, 37, 37);
+  margin: auto;
+  border-radius: 2em;
+  padding: 1em;
+  width: 80%;
+}
+
+/* Div containing 'View Post' & 'Delete Post' buttons in blogPost */
+#btn-holder {
+  text-align: center;
+  padding: 1em;
+}
+
+#btn-view {
+  font-size: 1em;
+  font-weight: bold;
+  width: 60%;
+  margin: 1em;
+  padding: 1em;
+  background-color: rgb(51, 104, 165);
+  color: white;
+  border-radius: 2em;
+  transition-timing-function: ease;
+  transition-duration: 2s;
+}
+
+#btn-delete {
+  font-size: 1em;
+  font-weight: bold;
+  width: 60%;
+  margin: 1em;
+  padding: 1em;
+  background-color: rgb(126, 63, 52);
+  color: white;
+  border-radius: 2em;
+  opacity: 0.5;
+  transition-timing-function: ease;
+  transition-duration: 2s;
+}
+
+#btn-delete:hover {
+  opacity: 1;
+  transition-timing-function: ease;
+  transition-duration: 2s;
+  border-color: gray;
+}
+
+#btn-item {
+  margin: 2em;
+  display: inline;
+}
+
+/*post.php styling*/
+#comments-off h4 {
+  text-align: center;
+  margin: auto;
+}
+
+#comment-log {
+  margin: auto;
+  text-align: center;
+  border-radius: 2em;
+  background-color: rgb(68, 21, 2);
+  margin: 1em auto;
+  width: 80%;
+  padding: 1em;
+  border: solid 2pt black;
+  overflow-y: scroll;
+}
+
+#comment-log p {
+  color: white;
+}
+
+#comment-form {
+  margin: auto;
+  text-align: center;
+  border-radius: 2em;
+  background-color: rgb(68, 21, 2);
+  margin: 1em auto;
+  width: 80%;
+  padding: 1em;
+  border: solid 2pt black;
+}
+
+#comment {
+  width: 80%;
+}
+
+#comment-div {
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+#comment-table td tr {
+  padding: 1em;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#comment-table {
+  border-spacing: 2em 0;
+  border-collapse: separate;
+}
+
+#cUsername {
+  background-color: rgb(226, 226, 225);
+  border-radius: 1em;
+}
+
+#commentContent {
+  background-color: rgb(15, 15, 13);
+  border-radius: 1em;
+  color: white;
+}
+
+#cLikes {
+  background-color: rgb(18, 29, 42);
+  color: white;
+  padding: 1em;
+  border-radius: 2em;
+  margin: 1em;
+  transition-timing-function: ease;
+  transition-duration: 2s;
+}
+
+#cLikes:hover {
+  background-color: rgb(36, 76, 126);
+  color: white;
+  padding: 1em;
+  border-radius: 2em;
+  margin: 1em;
+  transition-timing-function: ease;
+  transition-duration: 2s;
+}
+
+#comment-del-btn {
+  border-radius: 1em;
+  padding: 1em;
+}
+
+/* Account Settings Page styling */
+#accountForm {
+  text-align: center;
+  margin: auto;
+  display: block;
+  padding-top: 1em;
+  text-align: center;
+  background-color: rgb(187, 184, 184);
+  border: solid 3pt black;
+}
+
+#accountForm label {
+  font-size: 2em;
+  margin: 2em;
+  font-weight: bold;
+}
+
+#accountForm input {
+  font-weight: bold;
+  text-align: center;
+  transition-timing-function: ease;
+  transition-duration: 2s;
+  font-size: 2em;
+  border-radius: 1em;
+}
+
+#accountForm input:hover {
+  background-color: rgb(250, 250, 212);
+  transition-timing-function: ease-in;
+  transition-duration: 1s;
+}
+
+#imageForm {
+  text-align: center;
+  padding-top: 1em;
+  margin: 1em auto;
+  display: block;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border: solid 3pt black;
+}
+
+#imageForm label {
+  font-size: 2em;
+  margin: 2em;
+  font-weight: bold;
+}
+
+#accountForm #saveBtn {
+  text-align: center;
+  font-size: 2em;
+  background-color: rgb(25, 100, 42);
+  color: white;
+  border: solid 2pt black;
+  border-radius: 2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding: 0.5em;
+  width: 40%;
+  box-shadow: 2px 2px black;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+#accountForm #saveBtn:hover {
+  width: 45%;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+#imageForm #uploadBtn {
+  text-align: center;
+  font-size: 2em;
+  background-color: rgb(32, 99, 150);
+  color: white;
+  border: solid 2pt black;
+  border-radius: 2em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  width: 40%;
+  box-shadow: 2px 2px black;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+#imageForm #uploadBtn:hover {
+  width: 45%;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+#deleteForm {
+  text-align: center;
+  margin: 1em auto;
+  display: block;
+  padding-top: 1em;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border: solid 3pt black;
+}
+
+#deleteForm label {
+  font-size: 2em;
+  margin: 2em;
+  font-weight: bold;
+}
+
+#deleteForm #deleteBtn {
+  text-align: center;
+  font-size: 2em;
+  background-color: rgb(161, 55, 28);
+  color: white;
+  border: solid 2pt black;
+  border-radius: 2em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  width: 40%;
+  box-shadow: 2px 2px black;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+#deleteForm #deleteBtn:hover {
+  width: 45%;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+}
+
+/* Search.php styling */
+#center b {
+  color: yellow;
+}
+
+/* Profile page styling. */
+#ppProfilePage {
+  width: 15%;
+  margin: auto;
+}
+
+#flName {
+  margin: auto;
+  text-align: center;
+  color: rgb(18, 29, 42);
+}
+
+#ppTab {
+  background-color: lightblue;
+  border-radius: 1em;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  border: solid 2pt black;
+}
+
+/*Home Page Styling */
+#helper {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Admin Styling */
+
+.admin-table {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.admin-table th {
+  padding: 20px;
+}
+
+.admin-table tr:nth-child(1) {
+  background: #fff;
+}
+
+.admin-table tr:nth-child(even) {
+  background: rgb(149, 149, 149);
+}
+
+.user-amount {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.arrow {
+  position: absolute;
+  right: 5em;
+}
+
+/* FAQ Page Styling: */
+#pbody {
+  text-align: center;
+  width: 85%;
+  margin: auto;
+  font-size: 1.5em;
+}
+
+#tBody {
+  text-align: center;
+  width: 85%;
+  margin: 1em auto;
+  background-color: rgb(18, 29, 42);
+  color: white;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+#ppBody {
+  text-align: center;
+  width: 95%;
+  margin: 1em auto;
+  background-color: rgb(48, 50, 53);
+  color: white;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+#ppBody a {
+  color: rgb(171, 243, 171);
+  font-weight: bold;
+  border-radius: 1em;
+  margin: auto;
+}
+
+/* Contact Page Styling: */
+#cBody {
+  text-align: center;
+  width: 85%;
+  margin: 1em auto;
+  font-size: 1.2em;
+  background-color: rgb(18, 29, 42);
+  color: white;
+  padding: 1em;
+  border-radius: 1em;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+}
+
+#cBody h3 {
+  color: lightcoral;
+  font-weight: bold;
+}
+
+#cBody a {
+  color: rgb(171, 243, 171);
+  font-weight: bold;
+  border-radius: 1em;
+  padding: 0.5em;
+}
+
+#cBody:hover {
+  width: 95%;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  border: solid 2pt white;
+}
+#search{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    text-align: center;
+}
