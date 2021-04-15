@@ -17,7 +17,7 @@
       <!-- Display (Sign In / Profile / Sign Out) buttons depending on user login status. -->
       <script>
         $.ajax({
-         url: '../php/index.php',
+         url: '/php/index.php',
            success: function (response) {
              var button = $(response);
              $('#menu').append(button);
