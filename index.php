@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <?php include $_SERVER['DOCUMENT_ROOT'] . '/layouts/global_head_include.php';?>
-  <script type = "text/javascript" src="<?php echo $path; ?>/js/getPost.js"></script>
+  <?php include 'layouts/global_head_include.php';?>
+  <script type = "text/javascript" src="./js/getPost.js"></script>
   <body>
-    <?php include_once $path . '/layouts/header.php';?>
-    <?php include $path . '/php/commonFunctions.php';?>
+    <?php include_once 'layouts/header.php';?>
+    <?php include 'php/commonFunctions.php';?>
 
   <div class="main-content">
-      <?php include $path . '/layouts/sidebar.php';?>
+      <?php include 'layouts/sidebar.php';?>
 
       <div id="center">
         <h2 id='subHead'>Home Feed:</h2>
