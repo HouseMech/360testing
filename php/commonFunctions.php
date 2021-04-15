@@ -4,12 +4,12 @@ if(!function_exists('getConnection')){
     // create connection funcion
     function createConnection(){
         // credentials
-      $url = parse_url(getenv("mysql://bc005626eca4de:f24623a1@us-cdbr-east-03.cleardb.com/heroku_d75ec31c7fdaee9?reconnect=true"));
-      $server = $url["host"];
-      $username = $url["user"];
-      $password = $url["pass"];
-      $db = substr($url["path"], 1);
-      $conn = new mysqli($server, $username, $password, $db);
+        $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+        $server = $url["host"];
+        $username = $url["user"];
+        $password = $url["pass"];
+        $db = substr($url["path"], 1);
+        $conn = new mysqli($server, $username, $password, $db);
         return $conn;
     }
 }
