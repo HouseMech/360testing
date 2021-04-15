@@ -22,7 +22,7 @@
           $conn = createConnection();
 
           // Verify that the admin is the one making the account deletion for a user.
-          $stmt = $conn->prepare("SELECT * FROM blogUser WHERE userName = ?");
+          $stmt = $conn->prepare("SELECT * FROM bloguser WHERE userName = ?");
           $stmt->bind_param("s", $adminUser);
           $stmt->execute();
           $result = $stmt->get_result();

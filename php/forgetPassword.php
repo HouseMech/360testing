@@ -5,7 +5,7 @@ $email = $_POST["email"];
 
 $conn = createConnection();
 // check if email and password are valid 
-$stmt = $conn->prepare("SELECT email password FROM blogUser WHERE email = ? ");
+$stmt = $conn->prepare("SELECT email password FROM bloguser WHERE email = ? ");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -20,8 +20,8 @@ if(is_null($row)){
     $hash = password_hash($newPass,
           PASSWORD_DEFAULT);
     // putting hash into sql statement because user does not effect output
-    //update blogUser set bloguser.password = 123456 where email = 'rileyclark14@icloud.com'
-    $stmt = $conn->prepare("UPDATE blogUser SET blogUser.password = ? WHERE email = ?");
+    //update bloguser set bloguser.password = 123456 where email = 'rileyclark14@icloud.com'
+    $stmt = $conn->prepare("UPDATE bloguser SET bloguser.password = ? WHERE email = ?");
     $stmt->bind_param("ss", $hash ,$email);
     $stmt->execute();
     $conn -> close();

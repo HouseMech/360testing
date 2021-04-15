@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `blogUser`
+-- Table structure for table `bloguser`
 --
 
-CREATE TABLE `blogUser` (
+CREATE TABLE `bloguser` (
   `userName` varchar(15) NOT NULL,
   `password` varchar(255) DEFAULT NULL,
   `firstName` varchar(15) DEFAULT NULL,
@@ -87,9 +87,9 @@ CREATE TABLE `post` (
 --
 
 --
--- Indexes for table `blogUser`
+-- Indexes for table `bloguser`
 --
-ALTER TABLE `blogUser`
+ALTER TABLE `bloguser`
   ADD PRIMARY KEY (`userName`);
 
 --
@@ -132,14 +132,14 @@ ALTER TABLE `post`
 -- Constraints for table `comment`
 --
 ALTER TABLE `comment`
-  ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`cUserName`) REFERENCES `blogUser` (`userName`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`cUserName`) REFERENCES `bloguser` (`userName`) ON DELETE NO ACTION ON UPDATE CASCADE,
   ADD CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`pid`) REFERENCES `post` (`pid`) ON DELETE NO ACTION ON UPDATE CASCADE;
 
 --
 -- Constraints for table `post`
 --
 ALTER TABLE `post`
-  ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`pUserName`) REFERENCES `blogUser` (`userName`) ON DELETE NO ACTION ON UPDATE CASCADE;
+  ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`pUserName`) REFERENCES `bloguser` (`userName`) ON DELETE NO ACTION ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

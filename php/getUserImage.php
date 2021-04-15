@@ -9,7 +9,7 @@ if(!isLoggedIn()){
 }else{
     $username = $_SESSION['username'];
     $conn = createConnection();
-    $result = $conn->query("SELECT profilePic From blogUser WHERE userName='$username'");
+    $result = $conn->query("SELECT profilePic From bloguser WHERE userName='$username'");
     $row = $result->fetch_assoc();
     # if user is logged in but doesn't have a profile pic show defualt
     if(is_null($row['profilePic'])){

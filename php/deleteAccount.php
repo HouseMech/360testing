@@ -49,7 +49,7 @@
   }
 
   // Finally, delete the user from the `users` table.
-  $stmt = $conn->prepare("DELETE FROM blogUser WHERE userName = ?");
+  $stmt = $conn->prepare("DELETE FROM bloguser WHERE userName = ?");
   $stmt->bind_param("s", $username);
   $stmt->execute();
   $stmt->close();

@@ -15,7 +15,7 @@ $email = $_POST["email"];
 $password = $_POST["password"];
 
 // check if email and password are valid
-$stmt = $conn->prepare("SELECT email, password FROM blogUser WHERE email = ? ");
+$stmt = $conn->prepare("SELECT email, password FROM bloguser WHERE email = ? ");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -33,7 +33,7 @@ if(is_null($row)){
         $_SESSION["email"] = $email; 
         // Determine username for user and store as session['username']. Helpful for other pages.
         $stmt->close();
-        $stmt = $conn->prepare("SELECT userName FROM blogUser WHERE email = ?");
+        $stmt = $conn->prepare("SELECT userName FROM bloguser WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();

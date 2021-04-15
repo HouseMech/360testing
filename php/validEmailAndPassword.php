@@ -25,7 +25,7 @@ $hash = password_hash($password,
 // create connection
 $conn = createConnection();
 // check if anyone has same email reject request
-$stmt = $conn->prepare("SELECT email FROM blogUser WHERE email = ?");
+$stmt = $conn->prepare("SELECT email FROM bloguser WHERE email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -35,7 +35,7 @@ if(!is_null($result->fetch_assoc())){
     exit("Email is already taken");
 }
 $stmt->close();
-$stmt = $conn->prepare("SELECT userName FROM blogUser WHERE userName = ?");
+$stmt = $conn->prepare("SELECT userName FROM bloguser WHERE userName = ?");
 $stmt->bind_param("s", $userName);
 $stmt->execute();
 $result = $stmt->get_result();

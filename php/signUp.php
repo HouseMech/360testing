@@ -25,7 +25,7 @@ $hash = password_hash($password,
 // create connection
 $conn = createConnection();
 // email and username are already validated by validEmailAndPassword.php so no need to check if they are valid
-$stmt = $conn->prepare("INSERT INTO blogUser (userName, password, firstName, lastName, email ) VALUES(?, ?, ?, ?, ?)");
+$stmt = $conn->prepare("INSERT INTO bloguser (userName, password, firstName, lastName, email ) VALUES(?, ?, ?, ?, ?)");
 $stmt->bind_param("sssss", $userName, $hash , $fName, $lName, $email);
 if($stmt->execute()){
     $_SESSION["login"] = true;

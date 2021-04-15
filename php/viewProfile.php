@@ -19,7 +19,7 @@
       $conn = createConnection();
 
       // Fetch user's first & last name to view on profile.
-      $stmt = $conn->prepare("SELECT userName, firstName, lastName, profilePic FROM blogUser WHERE userName = ?");
+      $stmt = $conn->prepare("SELECT userName, firstName, lastName, profilePic FROM bloguser WHERE userName = ?");
       $stmt->bind_param("s", $user);
       $stmt->execute();
       $result = $stmt->get_result();

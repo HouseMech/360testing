@@ -26,7 +26,7 @@ if (count($_FILES) > 0 && is_uploaded_file($_FILES['profilePic']['tmp_name'])
   }
 
   echo $destination;
-  $conn->query("UPDATE blogUser SET profilePic='$destination' WHERE blogUser.userName='$username'") or die("Unable to insert image ".  mysqli_error($conn));
+  $conn->query("UPDATE bloguser SET profilePic='$destination' WHERE bloguser.userName='$username'") or die("Unable to insert image ".  mysqli_error($conn));
 
   $destination = ".".$destination;
   $fileToMove = $_FILES['profilePic']['tmp_name'];

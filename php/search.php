@@ -174,7 +174,7 @@
 
         // Fetch all post profiles that match search term.
         $stmt->close();
-        $stmt = $conn->prepare("SELECT * FROM blogUser WHERE userName Like ?");
+        $stmt = $conn->prepare("SELECT * FROM bloguser WHERE userName Like ?");
         $stmt->bind_param("s", $search);
         $stmt->execute();
         $result = $stmt->get_result();

@@ -18,7 +18,7 @@
       <?php if (isAdmin()): ?>
         <?php
           $conn = createConnection();
-          $stmt = "SELECT * FROM blogUser;";
+          $stmt = "SELECT * FROM bloguser;";
           $results = mysqli_query($conn, $stmt);
           $row_cnt = $results->num_rows;
         ?>

@@ -33,7 +33,7 @@ function isAdmin() {
   if (isLoggedIn()) {
     $conn = createConnection();
     $username = $_SESSION['username'];
-    $result = $conn->query("SELECT isAdmin From blogUser WHERE userName='$username'");
+    $result = $conn->query("SELECT isAdmin From bloguser WHERE userName='$username'");
     $row = $result->fetch_assoc();
     if ($row['isAdmin'] == true) {
       return true;
