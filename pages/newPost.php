@@ -20,7 +20,7 @@
         echo '<h2>You must be signed in to post.</h2>';
         echo "</div>";
       } else {
-        echo '<form method="POST" action="php/newPost.php" id="newPost-form" enctype="multipart/form-data">';
+        echo '<form method="POST" action="/php/newPost.php" id="newPost-form" enctype="multipart/form-data">';
         echo '<fieldset>';
         echo '<label for="pTitle">Post Title:*</label><br/>';
         echo '<input name="pTitle" id="pTitle" type="text" required/><br/>';
