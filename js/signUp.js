@@ -23,16 +23,16 @@ $(document).ready(function() {
         if(valid()){
             $.ajax({
                 type: "post",
-                url:  "../php/validEmailAndPassword.php",
+                url:  "/php/validEmailAndPassword.php",
                 data: {userName: userName.val(), password: password.val(), fName: fName.val(), lName: lName.val(), email: email.val()},
                 aysnc:false
             }).done(function(data){
                 if(data === "success"){
                     $(".signup-form").submit();
                 }
-                //returns message 
+                //returns message
                 $("#message").text(data);
-                
+
             }).fail(function(jqXHR) {
                 // if ajax request fails, display error
                 console.log("Error: " + jqXHR.status);
@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 
     // makes async request to ensure email and username are not in the database
-    
+
     // make sure fields are not empty highlights them red if they are
     function valid(){
         var valid = true;
