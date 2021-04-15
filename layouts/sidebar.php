@@ -6,8 +6,8 @@
   <div id="sidebar">
     <div id="sidebar-topdiv">
     <?php
-    #change relative referencing for index.php 
-    if($_SERVER['REQUEST_URI'] === "/Group32ProjectCosc360/index.php"){
+    #change relative referencing for index.php
+    if($_SERVER['REQUEST_URI'] === "/index.php"){
       include "./php/getUserImage.php";
     }else{
       include "../php/getUserImage.php";

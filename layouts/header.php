@@ -1,6 +1,6 @@
 <header id="navbar" class="header-container">
   <div class="header-title">
-    <a class="header-title-link" href="index.php"><h1>MyBlogPost</h1></a>
+    <a class="header-title-link" href="/index.php"><h1>MyBlogPost</h1></a>
   </div>
   <div class="header-options">
     <div class="header-input">
@@ -13,7 +13,7 @@
     </div>
 
     <div id="menu" class="header-button">
-      <a id="menuItem" href="index.php">Home</a>
+      <a id="menuItem" href="/index.php">Home</a>
       <!-- Display (Sign In / Profile / Sign Out) buttons depending on user login status. -->
       <script>
         $.ajax({
