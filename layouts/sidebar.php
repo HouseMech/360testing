@@ -21,10 +21,10 @@
 
     </div>
     <div id="sidebar-bottomdiv">
-      <a id="sidebar-btn" href='pages/newPost.php'>New Post</a>
-      <a id="sidebar-btn" href='php/getPosts.php'>View Posts</a>
-      <a id="sidebar-btn" href='pages/viewComments.php'>View Comments</a>
-      <a id="sidebar-btn" href='pages/accountSettings.php'>Account Settings</a>
+      <a id="sidebar-btn" href='/pages/newPost.php'>New Post</a>
+      <a id="sidebar-btn" href='/php/getPosts.php'>View Posts</a>
+      <a id="sidebar-btn" href='/pages/viewComments.php'>View Comments</a>
+      <a id="sidebar-btn" href='/pages/accountSettings.php'>Account Settings</a>
     </div>
   </div>
 <?php endif;  ?>
