@@ -18,17 +18,16 @@ if (count($_FILES) > 0 && is_uploaded_file($_FILES['profilePic']['tmp_name'])
   mysqli_autocommit($conn, false);  
   // assign destintion
   if(strpos($_FILES['profilePic']['name'], ".jpg") || strpos($_FILES['profilePic']['name'], ".JPG")){
-    $destination = "./img/profilePics/".$username.".jpg";
+    $destination = "../img/profilePics/".$username.".jpg";
   }elseif(strpos($_FILES['profilePic']['name'], ".png")){
-    $destination = "./img/profilePics/".$username.".png";
+    $destination = "../img/profilePics/".$username.".png";
   }else{
-    $destination = "./img/profilePics/".$username.".jpeg";
+    $destination = "../img/profilePics/".$username.".jpeg";
   }
 
   echo $destination;
   $conn->query("UPDATE bloguser SET profilePic='$destination' WHERE bloguser.userName='$username'") or die("Unable to insert image ".  mysqli_error($conn));
 
-  $destination = ".".$destination;
   $fileToMove = $_FILES['profilePic']['tmp_name'];
   if (move_uploaded_file($fileToMove,$destination)) {
     mysqli_commit($conn);
