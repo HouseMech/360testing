@@ -10,7 +10,7 @@
     if($_SERVER['REQUEST_URI'] === "/index.php"){
       include "./php/getUserImage.php";
     }else{
-      include "./php/getUserImage.php";
+      include "../php/getUserImage.php";
     }
     ?>
       <p id="sidebar-username">
