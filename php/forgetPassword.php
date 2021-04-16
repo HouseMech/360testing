@@ -26,14 +26,32 @@ if(is_null($row)){
     $stmt->execute();
     $conn -> close();
     // set up email
-    $to = $email;
-    $subject = "My Blog Post password reset";
-    $message = "your password has been changed to $newPass";
-    $header = "From: myblogpost1234@gmail.com";
+    $curl = curl_init();
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => "https://be.trustifi.com/api/i/v1/email",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS =>"{\"recipients\":[{\"email\":\"$email\"}],\"title\":\"MyblogPost Password Reset.\",\"html\":\"<p>Your new password is <b>$newPass</b> </p>\"}",
+        CURLOPT_HTTPHEADER => array(
+            "x-trustifi-key: fff5a03a51196bc00fea3bea514f4310c664f494c9c0ee4a" ,
+            "x-trustifi-secret: 4fdf1346265f385f832d88d377e7cbbe",
+            "content-type: application/json"
+        )
+    ));
+    
     // send email
-    if(mail($to, $subject, $message, $header)){
-        exit("success");
-    }else
-        exit("unable to send");
+    $response = curl_exec($curl);
+    $err = curl_error($curl);
+    curl_close($curl);
+    if ($err) {
+        echo "cURL Error #:" . $err;
+    } else {
+        echo "password changed successfully check email inbox for new password.";
+    }
 }
 ?>
