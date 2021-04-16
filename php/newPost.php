@@ -19,31 +19,26 @@
 
   // check if there is a file array, the file was uploaded through post and the name contains .jpg, JPG, png, or jpeg
   if (count($_FILES) > 0 && is_uploaded_file($_FILES['pImg']['tmp_name']) && (strpos($_FILES['pImg']['name'], ".jpg") || strpos($_FILES['pImg']['name'], ".JPG") || strpos($_FILES['pImg']['name'], ".png") || strpos($_FILES['pImg']['name'], ".jpeg" ))) {
-    $conn = createConnection();
-    ## only commit after file has been successfully downloaded.
+
+    
     // assign a unique filename, that is unique for each post.
     $randF = random_string(12);
     if(strpos($_FILES['pImg']['name'], ".jpg") || strpos($_FILES['pImg']['name'], ".JPG")){
       $filename = $randF.".jpg";
-      $destination = "./img/pImg/".$filename;
+      $destination = "../img/pImg/".$filename;
     }elseif(strpos($_FILES['pImg']['name'], ".png")){
       $filename = $randF.".png";
-      $destination = "./img/pImg/".$filename;
+      $destination = "../img/pImg/".$filename;
     }else{
       $filename = $randF.".jpeg";
-      $destination = "./img/pImg/".$filename;
+      $destination = "../img/pImg/".$filename;
     }
 
-    echo $destination;
-    $destination = ".".$destination;
     $fileToMove = $_FILES['pImg']['tmp_name'];
     if (move_uploaded_file($fileToMove,$destination)) {
-      mysqli_commit($conn);
-      $conn->close();
-      header("Location: ../php/viewProfile.php?user=" . $_SESSION['username']);
+      // if sucessful continue
     }
     else {
-      $conn->close();
       echo "There was a problem moving the file.";
     }       
   }
