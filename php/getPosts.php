@@ -86,14 +86,14 @@
               // View user profile.
               echo "</td>";
               echo "<td>";
-              echo "<form method='GET' action='php/viewProfile.php'>";
+              echo "<form method='GET' action='./viewProfile.php'>";
               echo "<input id='post-item' name='user' type='submit' value=" . $pUserName . "></input>";
               echo "</form>";
               echo "</td>";
 
               // Like button.
               echo "<td>";
-              echo "<form id='btn-item' action='php/like.php?pid=" . $pid . "&user=" . $username .  "' method='get'>";
+              echo "<form id='btn-item' action='./like.php?pid=" . $pid . "&user=" . $username .  "' method='get'>";
               echo "<button id='post-item' type='submit' formmethod='post'>" . '(' . $likes . ') 👍' . "</button>";
               echo "</form>";
               echo "</td>";
