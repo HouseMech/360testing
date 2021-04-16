@@ -20,7 +20,7 @@
         echo '<h2>You must be signed in to post.</h2>';
         echo "</div>";
       } else {
-        echo '<form method="POST" action="/php/newPost.php" id="newPost-form" enctype="multipart/form-data">';
+        echo '<form method="POST" action="../php/newPost.php" id="newPost-form" enctype="multipart/form-data">';
         echo '<fieldset>';
         echo '<label for="pTitle">Post Title:*</label><br/>';
         echo '<input name="pTitle" id="pTitle" type="text" required/><br/>';
@@ -29,7 +29,7 @@
         echo '<label for="pTags">Post Topic:</label><br/>';
         echo '<input name="pTags" id="pTags" type="text" /><br/>';
         echo '<label for="pImg">Upload Image <i>(.jpg)</i>:</label><br/>';
-        echo '<input type="file" id="pImg" name="pImg" accept="image/jpeg"><br/>';
+        echo '<input type="file" id="pImg" name="pImg" accept="image/*"><br/>';
         echo '<p id="commentText">';
         echo '<input type="checkbox" id="pComments" name="pComments" value="1" checked/>Allow Comments</p><br/>';
         echo '<p id="message"><p>';
