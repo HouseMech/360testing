@@ -52,12 +52,12 @@
 
               echo "<div id='btn-holder'>";
               // View Post button.
-              echo "<form id='btn-item' action='php/post.php?pid=" . $pid . "' method='get'>";
+              echo "<form id='btn-item' action='../php/post.php?pid=" . $pid . "' method='get'>";
               echo "<button id='btn-view' type='submit' formmethod='post'>View Post</button>";
               echo "</form>";
 
               // Delete comment button.
-              echo "<form id='btn-item' action='php/deleteComment.php?pid=" . $pid . "&cid=" . $cid . "' method='get'>";
+              echo "<form id='btn-item' action='../php/deleteComment.php?pid=" . $pid . "&cid=" . $cid . "' method='get'>";
               echo "<button id='btn-delete' type='submit' formmethod='post'>Delete Comment</button>";
               echo "</form>";
 
