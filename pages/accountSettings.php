@@ -26,7 +26,7 @@
         <h2>Please sign in to make account changes.</h2>
         </div>
         <?php else: // Edit account form.?>
-        <form id="accountForm">';
+        <form id="accountForm">
           <p><label for="userName">Username:</label></p>
           <p><input type="text" name="userName" id="userName" maxlength="15" readonly  style="background-color:grey;"/></p>
           <p><label for="fName">First Name:</label></p>
