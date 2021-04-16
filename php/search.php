@@ -83,7 +83,7 @@
 
             // View post button.
             echo "<div id='btn-holder'>";
-            echo "<form id='btn-item' action='php/post.php?pid=" . $pid . "' method='get'>";
+            echo "<form id='btn-item' action='/php/post.php?pid=" . $pid . "' method='get'>";
             echo "<button id='btn-view' type='submit' formmethod='post'>View Post</button>";
             echo "</form>";
             echo "</div>";
@@ -119,7 +119,7 @@
 
             // Display post title.
             echo "<div id='blogPost'>";
-            echo "<h2>" . $postTitle . "<img class='arrow' src='./img/pageImgs/up_arrow.png' height=25 width=25></h2>";
+            echo "<h2>" . $postTitle . "<img class='arrow' src='/img/pageImgs/up_arrow.png' height=25 width=25></h2>";
 
 
             // div needed for collapsible post
@@ -163,7 +163,7 @@
 
             // View post button.
             echo "<div id='btn-holder'>";
-            echo "<form id='btn-item' action='php/post.php?pid=" . $pid . "' method='get'>";
+            echo "<form id='btn-item' action='/php/post.php?pid=" . $pid . "' method='get'>";
             echo "<button id='btn-view' type='submit' formmethod='post'>View Post</button>";
             echo "</form>";
             echo "</div>";
@@ -197,7 +197,7 @@
 
             // View post button.
             echo "<div id='btn-holder'>";
-            echo "<form id='btn-item' action='php/viewProfile.php?user=" . $pUserName . "' method='get'>";
+            echo "<form id='btn-item' action='/php/viewProfile.php?user=" . $pUserName . "' method='get'>";
             echo "<button id='btn-view' type='submit' formmethod='post'>View Profile</button>";
             echo "</form>";
             echo "</div>";
