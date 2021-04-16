@@ -119,7 +119,7 @@
 
             // Display post title.
             echo "<div id='blogPost'>";
-            echo "<h2>" . $postTitle . "<img class='arrow' src='/img/pageImgs/up_arrow.png' height=25 width=25></h2>";
+            echo "<h2>" . $postTitle . "<img class='arrow' src='./img/pageImgs/up_arrow.png' height=25 width=25></h2>";
 
 
             // div needed for collapsible post
