@@ -47,7 +47,7 @@
           <p><input type="submit" value="Upload" id="uploadBtn"/></p>
         </form>
 
-        <form id='deleteForm' action='./php/deleteAccount.php' method='post'>
+        <form id='deleteForm' action='../php/deleteAccount.php' method='post'>
           <label for='deleteBtn'>Delete BlogPost Account:</label>
           <p id='terms'>By clicking the 'Delete Account' button below, you agree to delete<br>your account and any posts or comments linked with it.</p>
           <p><input type='submit' value="DeleteAccount"id ='deleteBtn'/></p>
