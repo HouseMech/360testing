@@ -105,12 +105,12 @@
               echo "<div id='btn-holder'>";
 
               // View post button.
-              echo "<form id='btn-item' action='php/post.php?pid=" . $pid . "' method='get'>";
+              echo "<form id='btn-item' action='./post.php?pid=" . $pid . "' method='get'>";
               echo "<button id='btn-view' type='submit' formmethod='post'>View Post</button>";
               echo "</form>";
 
               // Delete post button.
-              echo "<form id='btn-item' action='php/deletePost.php?pid=" . $pid . "' method='get'>";
+              echo "<form id='btn-item' action='./deletePost.php?pid=" . $pid . "' method='get'>";
               echo "<button id='btn-delete' type='submit' formmethod='post'>Delete Post</button>";
               echo "</form>";
 
