@@ -2,7 +2,7 @@
 <html lang="en">
 
   <?php include 'layouts/global_head_include.php';?>
-  <script type = "text/javascript" src="/js/getPost.js"></script>
+  <script type = "text/javascript" src="/js/index.js"></script>
   <body>
     <?php include_once 'layouts/header.php';?>
     <?php include 'php/commonFunctions.php';?>
