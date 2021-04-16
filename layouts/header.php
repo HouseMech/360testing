@@ -9,9 +9,9 @@
     <?php
     #change relative referencing for index.php
     if($_SERVER['REQUEST_URI'] === "/index.php"){
-      echo "<form action="./php/search.php" method="GET">";
+      echo '<form action="./php/search.php" method="GET">';
     }else{
-      echo "<form action="../php/search.php" method="GET">";
+      echo '<form action="../php/search.php" method="GET">';
     }
      ?>
         <input type="text" placeholder="Search.." name="search">
