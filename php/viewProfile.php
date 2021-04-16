@@ -85,7 +85,7 @@
 
         // Link to open attached image in new tab.
         if (!empty($imagePath)) {
-          echo "<div id='img-link'><a href='./img/pimg/" . $imagePath . "' target='_blank'>View Attached Image</a></div>";
+          echo "<div id='img-link'><a href='../img/pImg/" . $imagePath . "' target='_blank'>View Attached Image</a></div>";
         }
 
         // Display post topic, author, and # likes.
