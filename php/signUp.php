@@ -34,7 +34,7 @@ if($stmt->execute()){
     // Determine username for user and store as session['username']. Helpful for other pages.
     $stmt->close();
     $conn->close();
-    include_once "setUserimage.php";
+    include_once "./setUserImage.php";
 
     exit("success");
 }else{
