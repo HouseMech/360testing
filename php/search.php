@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php include '../layouts/global_head_include.php';?>
-  <script type = "text/javascript" src="/js/getPost.js"></script>
+  <script type = "text/javascript" src="../js/getPost.js"></script>
   <body>
   <?php include_once '../layouts/header.php';?>
   <?php include_once "commonFunctions.php"; ?>
@@ -40,7 +40,7 @@
 
             // Display post title.
             echo "<div id='blogPost'>";
-            echo "<h2>" . $postTitle . "<img class='arrow' src='./img/pageImgs/up_arrow.png' height=25 width=25></h2>";
+            echo "<h2>" . $postTitle . "<img class='arrow' src='../img/pageImgs/up_arrow.png' height=25 width=25></h2>";
 
             // div needed for collapsible post
             echo "<div class='slide'>";
@@ -55,7 +55,7 @@
 
             // Link to open attached image in new tab.
             if (!empty($imagePath)) {
-              echo "<div id='img-link'><a href='./img/pimg/" . $imagePath . "' target='_blank'>View Attached Image</a></div>";
+              echo "<div id='img-link'><a href='../img/pimg/" . $imagePath . "' target='_blank'>View Attached Image</a></div>";
             }
 
             // Display post topic, author, and # likes.
@@ -119,7 +119,7 @@
 
             // Display post title.
             echo "<div id='blogPost'>";
-            echo "<h2>" . $postTitle . "<img class='arrow' src='./img/pageImgs/up_arrow.png' height=25 width=25></h2>";
+            echo "<h2>" . $postTitle . "<img class='arrow' src='../img/pageImgs/up_arrow.png' height=25 width=25></h2>";
 
 
             // div needed for collapsible post
@@ -135,7 +135,7 @@
 
             // Link to open attached image in new tab.
             if (!empty($imagePath)) {
-              echo "<div id='img-link'><a href=" . $imagePath . ">View Attached Image</a></div>";
+              echo "<div id='img-link'><a href= ../img/pImg" . $imagePath . ">View Attached Image</a></div>";
             }
 
             // Display post topic, author, and # likes.
@@ -197,7 +197,7 @@
 
             // View post button.
             echo "<div id='btn-holder'>";
-            echo "<form id='btn-item' action='/php/viewProfile.php?user=" . $pUserName . "' method='get'>";
+            echo "<form id='btn-item' action='./viewProfile.php?user=" . $pUserName . "' method='get'>";
             echo "<button id='btn-view' type='submit' formmethod='post'>View Profile</button>";
             echo "</form>";
             echo "</div>";
