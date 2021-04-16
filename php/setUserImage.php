@@ -34,7 +34,7 @@ if (count($_FILES) > 0 && is_uploaded_file($_FILES['profilePic']['tmp_name'])
     mysqli_commit($conn);
     $conn->close();
     #local host
-    header("https://housemech-blogpost.herokuapp.com/pages/accountSettings.php");
+    header("Location: https://housemech-blogpost.herokuapp.com/pages/accountSettings.php");
     
   }
   else {
@@ -43,6 +43,6 @@ if (count($_FILES) > 0 && is_uploaded_file($_FILES['profilePic']['tmp_name'])
   }       
 }else{
   echo "No, file present";
-  header("https://housemech-blogpost.herokuapp.com/pages/accountSettings.php");
+  header("Location: https://housemech-blogpost.herokuapp.com/pages/accountSettings.php");
 }
 ?>
