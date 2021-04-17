@@ -18,7 +18,7 @@
           // Display post with the newest post first.
           $conn = createConnection();
           $stmt = $conn->prepare("SELECT * FROM post ORDER BY time DESC");
-          $stmt->bind_param("s", $username);
+     
           $stmt->execute();
           $result = $stmt->get_result();
           $num_posts = $result -> num_rows;
