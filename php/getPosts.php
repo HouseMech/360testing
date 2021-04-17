@@ -9,7 +9,7 @@
   <div class="main-content">
     <?php include '../layouts/sidebar.php';?>
     <div id="center">
-      <h2 id='subHead'>View Your Posts:</h2>
+      <h2 id='subHead'>View Users Posts:</h2>
       <?php
         startSession();
         // Prevent user from accessing this page unless signed in.
@@ -17,18 +17,18 @@
         if ($username != 'NULL'){
           // Display post with the newest post first.
           $conn = createConnection();
-          $stmt = $conn->prepare("SELECT * FROM post WHERE pUserName = ? ORDER BY time DESC");
+          $stmt = $conn->prepare("SELECT * FROM post ORDER BY time DESC");
           $stmt->bind_param("s", $username);
           $stmt->execute();
           $result = $stmt->get_result();
           $num_posts = $result -> num_rows;
           if ($num_posts == 1){
             echo "<div id='numPosts'>";
-            echo '<h2>You have <u>' . $num_posts . '</u> post!</h2>';
+            echo '<h2>There are <u>' . $num_posts . '</u> post!</h2>';
             echo "</div>";
           } else {
             echo "<div id='numPosts'>";
-            echo '<h2>You have <u>' . $num_posts . '</u> posts!</h2>';
+            echo '<h2>There are <u>' . $num_posts . '</u> posts!</h2>';
             echo "</div>";
           }
           if ($result){
